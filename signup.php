@@ -1,135 +1,86 @@
-<!DOCTYPE html>
+<?php
 
-    <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Login | Everleaf </title>
+include 'navbar.php';
+include "dbconnect.php";
+ // Initilize varibles
+$email = $name = $password = $conf_password = $succ_msg = $email_err = $err_msg = ""; 
+$error = false; 
+if (isset($_POST['submit'])) {    // if Form is submitted
+	// store form data into variables
+	$email 		= trim($_POST['email']);
+	$name 		= trim($_POST['name']);  
+	$password = trim($_POST['password']);
 
-        
-        <link rel="stylesheet" href="./css/signin.css"/>
-        <link rel="shortcut icon" href="./assets/images/favicon.jpg" type="image/svg+xml">
-                
-     
-                        
-       
-                                
-            </head>
-            <body>
-                <section class="container forms">
-                    
-                    <div class="form login">
-                        <div class="form-content">
-                            <!-- <img src="./assets/images/logo.jpg"> -->
-                            <header>Sign Up</header>
-                            
+	// generate md5 hash
+	$password = md5($password);
+	// validate email
+	if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
+  	$email_err = "Invalid email format";
+  	$error = true;
+	}
+	// check if email already exists
+    $sql = "select * from users where email = '$email'";
+	$result = mysqli_query($conn,$sql);
+	if (mysqli_num_rows($result) > 0) {
+		$email_err = "Email already exists";
+		$error = true;
+    }
+	if (!$error) {
+		// $signup_date = date('Y-m-d');
+		// write SQL statement to insert into database table
+		$sql = "insert into users (email,name,password) values ('$email','$name','$password')";
+		// Execute query
+		$result = mysqli_query($conn,$sql);
+		if ($result)
+			$succ_msg = "Signup Successful";
+            header("location:index.php");
+    }
+		else
+        {
+			$err_msg = "Error in Signup";
+		}
+	}
+	?>	
+   <link rel="stylesheet" href="css/sample.css?v=2">
+    <section class="login">
+    <div class="form login">
+    <div class="form-content">  
+        <h1>Signup</h1>
+    <form class="form-1" action="signup.php" method ="post">
+	 	
+	 	<?php if ($succ_msg !="") ?>
+	 	<p class="succ-msg"><?php echo $succ_msg; $succ_msg=""; ?></p>
+	 	<?php if ($err_msg !="") ?>
+	 	<p class="err-msg"><?php echo $err_msg; $err_msg ="";?></p>
 
-
-                            <form action="#">
-                                <div class="field input-field">
-                                    <input type="name" placeholder="Name" class="input">
-                                </div>
-                                 <form action="#">
-                                <div class="field input-field">
-                                    <input type="email" placeholder="Email" class="input">
-                                </div>
-                                <form action="#">
-                                    <div class="field input-field">
-                                        <input type="number" placeholder="Mobile number" class="input">
-                                    </div>
-                            <form action="#">
-                                <div class="field input-field">
-                                    <input type="name
-                                    " placeholder="Username" class="input">
-                                </div>
-        
-                                <div class="field input-field">
-                                    <input type="password" placeholder="Set Password" class="password">
-                                    <i class='bx bx-hide eye-icon'></i>
-                                </div>
-        
-                                <!-- <div class="form-link">
-                                    <a href="#" class="forgot-pass">Forgot password?</a>
-                                </div> -->
-        
-                                <div class="field button-field">
-                                    <button>Sign UP</button>
-                                </div>
-                            </form>
-        
-                            <!-- <div class="form-link">
-                                <span>Don't have an account? <a href="signup.html" class="link signup-link">Signup</a></span>
-                            </div> -->
-                        </div>
-        
-                        <!-- <div class="line"></div>
-        
-                        <div class="media-options">
-                            <a href="#" class="field facebook">
-                                <i class='bx bxl-facebook facebook-icon'></i>
-                                <span>Login with Facebook</span>
-                            </a>
-                        </div>
-        
-                        <div class="media-options">
-                            <a href="#" class="field google">
-                                <img src="#" alt="" class="google-img">
-                                <span>Login with Google</span>
-                            </a>
-                        </div> -->
-        
-                    </div>
-        
-                    <!-- Signup Form -->
-        
-                    <div class="form signup">
-                        <div class="form-content">
-                            <header>Signup</header>
-                            <form action="#">
-                                <div class="field input-field">
-                                    <input type="email" placeholder="Email" class="input">
-                                </div>
-        
-                                <div class="field input-field">
-                                    <input type="password" placeholder="Create password" class="password">
-                                </div>
-        
-                                <div class="field input-field">
-                                    <input type="password" placeholder="Confirm password" class="password">
-                                    <i class='bx bx-hide eye-icon'></i>
-                                </div>
-        
-                                <div class="field button-field">
-                                    <button>Signup</button>
-                                </div>
-                            </form>
-        
-                            <div class="form-link">
-                                <span>Already have an account? <a href="#" class="link login-link">Login</a></span>
-                            </div>
-                        </div>
-        
-                        <div class="line"></div>
-        
-                        <div class="media-options">
-                            <a href="#" class="field facebook">
-                                <i class='bx bxl-facebook facebook-icon'></i>
-                                <span>Login with Facebook</span>
-                            </a>
-                        </div>
-        
-                        <div class="media-options">
-                            <a href="#" class="field google">
-                                <img src="#" alt="" class="google-img">
-                                <span>Login with Google</span>
-                            </a>
-                        </div>
-        
-                    </div>
-                </section>
-        
-                <!-- JavaScript -->
-                <script src="js/script.js"></script>
-            </body>
-        </html>
+	 	<div class="text">
+			 	<!-- <label>Email Id</label> -->
+			 	<input type = "text" class="input" name="email" id = "email" maxlength="255" value="<?php echo $email;?>" placeholder ="Enter your Email Id" required>
+			 	<div class="error"><?php if ($email_err !="") echo $email_err;?></div>
+		</div>
+		<div class="text">
+			 	<!-- <label>Name</label> -->
+			 	<input type = "text" class="input" name="name" maxlength="255" value="<?php echo $name;?>" placeholder ="Enter your Name" required>
+		</div>
+		<div class="text">
+			 	<!-- <label>Password</label> -->
+			 	<input type = "password" class="input" name="password" id = "password" maxlength="20" placeholder ="Enter Password" required>
+		</div>
+		<div class="text">
+	 			<!-- <label>Confirm Password</label> -->
+	 			<input type = "password" class="input" name="conf_password" id = "conf_password" maxlength="20" value="<?php echo $conf_password;?>" placeholder ="Re Enter Password" required>
+		</div>
+		<!-- <div class="col-md-12 form-group">
+	 			<input type="checkbox" class="check" onclick="togglePwd()">Show Password
+		</div> -->
+		<div class="button">
+	 			<button type="submit" class="btn" name="submit">Submit</button>
+		</div>
+	</form>
+<!-- <script>
+  $(document).ready(function() { 
+       $("#signup").addClass("active"); 
+    });
+</script> -->
+</body>
+</html>

@@ -1,11 +1,14 @@
+<?php
+include 'navbar.php';
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>GLOBEXPLORE</title>
-    <link rel="stylesheet" href="css/style.css">
-
+    <link rel="stylesheet" href="css/style.css?v=9">
+    <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
     <!-- favicon -->
     <link rel="icon" 
     sizes="32*32"
@@ -14,48 +17,7 @@
 </head>
 <body>
 
-<!-- navbar -->
-
-    <nav class="navbar" >
-        <span><a >
-            <img
-                    class="logo1"
-                    src="./img/logo (2).png"/> 
-                
-                <h1 class="logo">GLOBEXPLORE</h1></a
-            ></span>
-
-         
-        
-         <ul class="nav-links">
-            <li>
-                <a href="#home" id="one" >Home</a>
-            </li>
-            <li>
-                <a href="#events" id="two" >Events</a>
-            </li>
-            <li>
-                <a href="#explore" id="three">Explore</a>
-            </li>
-            <li>
-                <a href="tours.php" id="four">Tours</a>
-            </li>
-            <li>
-                <a href="#about" id="five">About</a></li>
-            </li>
-            <li>
-                <a href="#contact" id="six">Contact</a>
-            </li>
-            <li>
-                <a href="signin.php
-                " id="seven" class="cir_border"
-                    >SignIn </a>
-                
-            </li>
-            </ul>
-            <img src="./img/menu-btn.png" alt="" class="menu-btn" />
-     </nav>
-     <header>
+<header>
         <!-- <div class="header-img" style="background-image: url(./img/pexels-archie-binamira-913215.jpg);"></div> -->
         <div class="header-content">
             <h2 >Let's Travel</h2>
@@ -108,7 +70,11 @@
 
 <section class="explore" id="explore">
 <div class="explore-content">
-<h2>Explore The World </h2>
+<h2>About Us</h2>
+<p>
+    
+Welcome to GlobExplore your gateway to unforgettable adventures! We specialize in crafting tour packages that turn ordinary trips into extraordinary experiences. Our team is dedicated to providing hassle-free travel with expert guides and seamless logistics, ensuring you create lasting memories at every destination.
+</p>
 </div>
 </section>
  
@@ -160,7 +126,78 @@
 </div> -->
 
 
-<?php include('includes/sigin.php');?>	
+<!-- contact us -->
+
+<div class="footer" id="footer">
+<!-- <div class ="title">
+    <h1>GlobExplore</h1>
+    </div> -->
+    <div class="box1">
+    <h1>GLOBEXPLORE</h1>
+    <h4>Discover amazing journeys with us. We specialize in crafting unique travel experiences. Explore our handpicked destinations and start creating unforgettable memories. Your adventure begins here!.</h4>
+    <h2>Get in Touch</h2>
+
+
+        <div class="email">
+        <a href="#">
+       <p>Email: globexplore@gmail.com</p>
+        </a>
+        </div>
+        <div class="phone">
+        <a href="#">
+        <p>  Call: 1800200200</p>
+
+        </a>
+        </div>
+        <!-- <h1>Social</h1> -->
+        <div class="social">
+        <a href="">
+            <!-- <p>Our Instagram</p> -->
+            
+            <img src="./img/i1.png" alt=""></a>
+            <a href="">
+            <img src="./img/i2.png" alt="" ></a>
+            <a href="">
+            <img src="./img/i3.png" alt="" ></a>
+
+        </div>
+    </div>
+    </div>
+</div>
+<div class="footer-bottom">
+      <div class="container">
+
+        <p class="copyright">
+          &copy; 2024 <a href="#">GlobExplore</a>. All Rights Reserved
+        </p>
+
+        <ul class="footer-bottom-list">
+
+          <li>
+            <a href="#" class="footer-bottom-link">Privacy Policy</a>
+          </li>
+
+          <li>
+            <a href="#" class="footer-bottom-link">Terms & Conditions</a>
+          </li>
+
+          <li>
+            <a href="#" class="footer-bottom-link">Sitemap</a>
+          </li>
+
+        </ul>
+
+        <!-- <div class="payment">
+          <p class="payment-title">We Support</p>
+
+          <img src="./assets/images/payment-img.png" alt="Online payment logos" class="payment-img">
+        </div> -->
+
+      </div>
+    </div>
+
+
+<!-- <?php include('includes/sigin.php');?>	 -->
 </body>
 
 </html>
