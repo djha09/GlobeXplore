@@ -26,7 +26,7 @@ if (isset($_POST['submit'])) {    // if Form is submitted
 		$error = true;
     }
 	if (!$error) {
-		// $signup_date = date('Y-m-d');
+		
 		// write SQL statement to insert into database table
 		$sql = "insert into users (email,name,password) values ('$email','$name','$password')";
 		// Execute query
