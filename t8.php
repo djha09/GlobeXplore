@@ -13,21 +13,11 @@ include("navbar.php");
    
 </head>
 <body>
-    <header>
-    <style>
-   header {
-    width: 100vw;
-    height: 60vh;
-    background-image: url(../img/packages/cover/vietnam.jpg);
-    background-position: left;
-    background-attachment: fixed;
-    background-size: cover;
-    display: flex;
-    align-items: end;
-    justify-content: center;
-}
-            
-        </style>
+<header >
+    <img src="./img/packages/cover/goa.jpg" alt="">
+    </header>
+
+    
        
         <div class="effect">
         <div class ="header-title">
@@ -38,7 +28,7 @@ include("navbar.php");
         </div>
         </div>
 
-    </header>
+   
 
 
 

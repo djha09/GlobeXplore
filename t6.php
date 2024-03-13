@@ -13,7 +13,10 @@ include("navbar.php");
     
 </head>
 <body>
-    <header>
+<header >
+    <img src="./img/packages/cover/vietnam.jpg" alt="">
+    </header>
+
        
         <div class="effect">
         <div class ="header-title">
@@ -24,7 +27,7 @@ include("navbar.php");
         </div>
         </div>
 
-    </header>
+    
 
 
 
