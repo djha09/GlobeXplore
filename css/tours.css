@@ -140,7 +140,7 @@ html {
     
   } */
   .banner img{
-    width: 110%;
+    width: 80%;
     /* height: 340px; */
     /* background-image: url(../img/ladakh-big-banner-1920x600.jpg); */
     background-position: center;
@@ -151,6 +151,8 @@ html {
     align-items: center;
     justify-content: center;
     /* margin-top: 86px; */
+    margin: auto;
+    border-radius: 15px;
     
   }
 
@@ -223,6 +225,9 @@ html {
   
   .box .card img {
     width: 140.4px;
+    border-radius: 40px;
+    border: solid grey;
+    border-radius: 35px;
 
   }
   .box .card img:hover{
@@ -288,8 +293,8 @@ html {
 }
 
 .email:hover{
-  transform: scale(1.05);
-  transition: ease-in-out(0.5s);
+  background-color: #fc036b;
+  border: white solid 2px;
 }
 .box1 .phone{
   background-color: white;
@@ -310,8 +315,8 @@ html {
 }
 
 .phone:hover{
-  transform: scale(1.05);
-  transition: ease-in-out(0.9s);
+  background-color: #fc036b;
+  border: white solid 2px;
 }
 
 .box1 .social{
@@ -351,7 +356,7 @@ html {
 }
 .social img{
   width: 4vw;
-  height: 7vh;
+  height: 8vh;
   display: inline-flex;
   align-items: center;
   justify-content: space-between;
@@ -365,7 +370,8 @@ html {
 
 
 .phone:hover{
-  background-color: white;
+  background-color: #fc036b;
+  border: white solid 2px;
 }
 .footer-bottom { padding-block: 20px; }
 

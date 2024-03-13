@@ -3,16 +3,15 @@
 include 'navbar.php';
 include 'dbconnect.php';
 
- // Initilize varibles
+ 
 $email = $err_msg = "";  
-if (isset($_POST['submit'])) {    // if Form is submitted
-	// store form data into variable
+if (isset($_POST['submit'])) {   
 	$email = trim($_POST['email']);
 	$password = trim($_POST['password']);
-	// generate md5 hash, because password is stored in database with md5 hash
+	
 	$password = md5($password);
 	
-	// check if same emailid and password are stored in the database
+	
 	$sql = "select * from users where email = ? and password = ?";
 	$stmt = $conn->prepare($sql);
 	$stmt->bind_param("ss", $email, $password);
@@ -52,9 +51,7 @@ if (isset($_POST['submit'])) {    // if Form is submitted
     <input type = "password" class="input" name="password" id = "password" placeholder ="Enter Password" required>
   </div>
 
-  <!-- <div class="col-md-12 form-group">
-    <input type="checkbox" class="check">Show Password
-  </div> -->
+  
   <div class="button">
     <button type="submit" class="btn" name="submit">Login</button>
   </div>

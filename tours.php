@@ -8,7 +8,7 @@ include("navbar.php")
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>GLOBEXPLORE</title>
     <!-- <link rel="stylesheet" href="css/tours.css"> -->
-    <link rel="stylesheet" href="css/tours.css?v=4">
+    <link rel="stylesheet" href="css/tours.css?v=9">
 
     <!-- favicon -->
     <link rel="icon" 
@@ -65,7 +65,12 @@ include("navbar.php")
  -->
      <header>
     <!-- <img src="./img/ladakh-big-banner-1920x600.jpg" alt=""> -->
+<!-- <style>
+header{
+    background-image: url(../img/);
+}
 
+</style> -->
 
      </header>
 
@@ -78,7 +83,8 @@ include("navbar.php")
         </div>
         <div class="box">
             <div class="card">
-                <img class="card-img" src="./img/trending/t1.avif" />
+            <a href="t1.php">
+                <img class="card-img" src="./img/trending/t1.avif" /></a>
                 <h4>Kashmir</h4>
                 <!-- <p >
                     Everest base camp trek is without a doubt, one of
@@ -87,7 +93,8 @@ include("navbar.php")
                 <!-- <a href="#" class="bttn">All Details</a> -->
             </div>
             <div class="card">
-                <img src="./img/trending/t2.avif" />
+            <a href="t2.php">
+                <img src="./img/trending/t2.avif" /></a>
             <h4>Kerala</h4>
             <!-- <p>
                 Settled off the Kerala coast on Laccadive sea, Lakshadweep . 
@@ -96,7 +103,8 @@ include("navbar.php")
             <!-- <a href="tours.php" class="bttn1">View All</a> -->
         </div>
         <div class="card">
-            <img src="./img/trending/t3.avif" />
+        <a href="t3.php">
+            <img src="./img/trending/t3.avif" /></a>
             <h4>Rajasthan</h4>
             <!-- <p>
                 Embark on the best desert safari in Dubai and try thrilling activities,
@@ -105,7 +113,8 @@ include("navbar.php")
             <!-- <a href="#" class="bttn">All Details</a> -->
         </div>
         <div class="card">
-            <img src="./img/trending/t4.avif" />
+        <a href="t4.php">
+            <img src="./img/trending/t4.avif" /></a>
             <h4>Andaman</h4>
             <!-- <p>
                 Embark on the best desert safari in Dubai and try thrilling activities,
@@ -114,7 +123,8 @@ include("navbar.php")
             <!-- <a href="#" class="bttn">All Details</a> -->
         </div>
         <div class="card">
-            <img src="./img/trending/t5.avif" />
+        <a href="t5.php">
+            <img src="./img/trending/t5.avif" /></a>
             <h4>Dubai</h4>
             <!-- <p>
                 Embark on the best desert safari in Dubai and try thrilling activities,
@@ -123,7 +133,8 @@ include("navbar.php")
             <!-- <a href="#" class="bttn">All Details</a> -->
         </div>
         <div class="card">
-            <img src="./img/trending/t6.avif" />
+            <a href="t6.php">
+            <img src="./img/trending/t6.avif"/></a>
             <h4>Vietnam</h4>
             <!-- <p>
                 Embark on the best desert safari in Dubai and try thrilling activities,
@@ -132,7 +143,8 @@ include("navbar.php")
             <!-- <a href="#" class="bttn">All Details</a> -->
         </div>
         <div class="card">
-            <img src="./img/trending/t7.avif" />
+        <a href="t7.php">
+            <img src="./img/trending/t7.avif" /></a>
             <h4>Thailand</h4>
             <!-- <p>
                 Embark on the best desert safari in Dubai and try thrilling activities,
@@ -141,7 +153,8 @@ include("navbar.php")
             <!-- <a href="#" class="bttn">All Details</a> -->
         </div>
         <div class="card">
-            <img src="./img/trending/t8.avif" />
+        <a href="t8.php">
+            <img src="./img/trending/t8.avif" /></a>
             <h4>Goa</h4>
             <!-- <p>
                 Embark on the best desert safari in Dubai and try thrilling activities,
@@ -153,12 +166,6 @@ include("navbar.php")
     </div>
 </div>
 </section>
-
-<div class="banner">
-<img src="./img/ladakh-big-banner-1920x600.jpg">
-</div>
-<!--Events-->
-
 <section class="events" id="tours">
     <div class="container">
         <div class="title">
@@ -242,6 +249,199 @@ include("navbar.php")
     </div>
 </div>
 </section>
+
+
+
+
+
+
+<div class="banner">
+<img src="./img/ladakh.png">
+</div>
+<!--Events-->
+<section class="events" id="tours">
+    <div class="container">
+        <div class="title">
+            <h1>Bharat Yatra</h1>
+            <div class="line"></div>
+        </div>
+        <div class="box">
+            <div class="card">
+                <img class="card-img" src="./img/india/i1.avif" />
+                <h4>Kashmir</h4>
+                <!-- <p >
+                    Everest base camp trek is without a doubt, one of
+                    the most renowned travel destinations in the world. -->
+                </p>
+                <!-- <a href="#" class="bttn">All Details</a> -->
+            </div>
+            <div class="card">
+                <img src="./img/india/i2.avif" />
+            <h4>Kerala</h4>
+            <!-- <p>
+                Settled off the Kerala coast on Laccadive sea, Lakshadweep . 
+                A club of 36 islands, a nature tourism destination. -->
+            </p>
+            <!-- <a href="tours.php" class="bttn1">View All</a> -->
+        </div>
+        <div class="card">
+            <img src="./img/india/i3.avif" />
+            <h4>Rajasthan</h4>
+            <!-- <p>
+                Embark on the best desert safari in Dubai and try thrilling activities,
+                 enjoy BBQ meals, round trip transfers etc.
+            </p> -->
+            <!-- <a href="#" class="bttn">All Details</a> -->
+        </div>
+        <div class="card">
+            <img src="./img/india/i4.avif" />
+            <h4>Goa</h4>
+            <!-- <p>
+                Embark on the best desert safari in Dubai and try thrilling activities,
+                 enjoy BBQ meals, round trip transfers etc.
+            </p> -->
+            <!-- <a href="#" class="bttn">All Details</a> -->
+        </div>
+        <div class="card">
+            <img src="./img/india/i5.avif" />
+            <h4>Himachal</h4>
+            <!-- <p>
+                Embark on the best desert safari in Dubai and try thrilling activities,
+                 enjoy BBQ meals, round trip transfers etc.
+            </p> -->
+            <!-- <a href="#" class="bttn">All Details</a> -->
+        </div>
+        <div class="card">
+            <img src="./img/india/i6.avif" />
+            <h4>Gujarat</h4>
+            <!-- <p>
+                Embark on the best desert safari in Dubai and try thrilling activities,
+                 enjoy BBQ meals, round trip transfers etc.
+            </p> -->
+            <!-- <a href="#" class="bttn">All Details</a> -->
+        </div>
+        <!-- <div class="card">
+            <img src="./img/trending/t7.avif" />
+            <h4>Thailand</h4> -->
+            <!-- <p>
+                Embark on the best desert safari in Dubai and try thrilling activities,
+                 enjoy BBQ meals, round trip transfers etc.
+            </p> -->
+            <!-- <a href="#" class="bttn">All Details</a> -->
+        <!-- </div>
+        <div class="card">
+            <img src="./img/trending/t8.avif" />
+            <h4>Goa</h4> -->
+            <!-- <p>
+                Embark on the best desert safari in Dubai and try thrilling activities,
+                 enjoy BBQ meals, round trip transfers etc.
+            </p> -->
+            <!-- <a href="#" class="bttn">All Details</a> -->
+        </div>
+
+    </div>
+</div>
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- unexplored -->
+<section class="events" id="tours">
+    <div class="container">
+        <div class="title">
+            <h1>Explore the Unexplored</h1>
+            <div class="line"></div>
+        </div>
+        <div class="box">
+            <div class="card">
+                <img class="card-img" src="./img/unexplored/u1.avif" />
+                <h4>Mauritius</h4>
+                <!-- <p >
+                    Everest base camp trek is without a doubt, one of
+                    the most renowned travel destinations in the world. -->
+                </p>
+                <!-- <a href="#" class="bttn">All Details</a> -->
+            </div>
+            <div class="card">
+                <img src="./img/unexplored/u2.avif" />
+            <h4>Gujarat</h4>
+            <!-- <p>
+                Settled off the Kerala coast on Laccadive sea, Lakshadweep . 
+                A club of 36 islands, a nature tourism destination. -->
+            </p>
+            <!-- <a href="tours.php" class="bttn1">View All</a> -->
+        </div>
+        <div class="card">
+            <img src="./img/unexplored/u3.avif" />
+            <h4>Maharashtra</h4>
+            <!-- <p>
+                Embark on the best desert safari in Dubai and try thrilling activities,
+                 enjoy BBQ meals, round trip transfers etc.
+            </p> -->
+            <!-- <a href="#" class="bttn">All Details</a> -->
+        </div>
+        <div class="card">
+            <img src="./img/unexplored/u4.avif" />
+            <h4>Uttarakhand</h4>
+            <!-- <p>
+                Embark on the best desert safari in Dubai and try thrilling activities,
+                 enjoy BBQ meals, round trip transfers etc.
+            </p> -->
+            <!-- <a href="#" class="bttn">All Details</a> -->
+        </div>
+        <div class="card">
+            <img src="./img/unexplored/u5.avif" />
+            <h4>South Africa</h4>
+            <!-- <p>
+                Embark on the best desert safari in Dubai and try thrilling activities,
+                 enjoy BBQ meals, round trip transfers etc.
+            </p> -->
+            <!-- <a href="#" class="bttn">All Details</a> -->
+        </div>
+        <div class="card">
+            <img src="./img/unexplored/u6.avif" />
+            <h4>Australia</h4>
+            <!-- <p>
+                Embark on the best desert safari in Dubai and try thrilling activities,
+                 enjoy BBQ meals, round trip transfers etc.
+            </p> -->
+            <!-- <a href="#" class="bttn">All Details</a> -->
+        </div>
+        <!-- <div class="card">
+            <img src="./img/International/shutterstock_176887880.avif" />
+            <h4>Thailand</h4> -->
+            <!-- <p>
+                Embark on the best desert safari in Dubai and try thrilling activities,
+                 enjoy BBQ meals, round trip transfers etc.
+            </p> -->
+            <!-- <a href="#" class="bttn">All Details</a> -->
+        <!-- </div> -->
+        <!-- <div class="card">
+            <img src="./img/trending/t8.avif" />
+            <h4>Goa</h4> -->
+            <!-- <p>
+                Embark on the best desert safari in Dubai and try thrilling activities,
+                 enjoy BBQ meals, round trip transfers etc.
+            </p> -->
+            <!-- <a href="#" class="bttn">All Details</a> -->
+        <!-- </div> -->
+
+    </div>
+</div>
+</section>
+
+
+
+
 <div class="footer" id="footer">
 <!-- <div class ="title">
     <h1>GlobExplore</h1>

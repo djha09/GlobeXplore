@@ -18,13 +18,13 @@ $result = mysqli_query($conn,$query);
             
         
             echo $row['id'];
-            echo $row['name'];
-            echo $row['email'];
+                echo $row['name'];
+                echo $row['email'];
         }
             ?>
         
         
-<span></span>
+<!-- <span>echo $row['id']</span> -->
 <span></span>
 <span></span>
 

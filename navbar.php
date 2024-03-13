@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>GLOBEXPLORE</title>
-    <link rel="stylesheet" href="css/navbar.css?v=5">
+    <link rel="stylesheet" href="css/navbar.css?v=6">
     <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
     <!-- favicon -->
     <link rel="icon" 

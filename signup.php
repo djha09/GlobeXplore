@@ -2,23 +2,26 @@
 
 include 'navbar.php';
 include "dbconnect.php";
- // Initilize varibles
-$email = $name = $password = $conf_password = $succ_msg = $email_err = $err_msg = ""; 
+$email = $name = $password = $conf_password = $succ_msg = $email_err = $err_msg = $name_err = $password_err = ""; 
 $error = false; 
-if (isset($_POST['submit'])) {    // if Form is submitted
-	// store form data into variables
+if (isset($_POST['submit'])) {    
 	$email 		= trim($_POST['email']);
 	$name 		= trim($_POST['name']);  
+	if (!preg_match("/^[a-zA-Z-' ]*$/",$name)) {
+		$name_err = "Only letters and white space allowed";
+		$error = true;
+	  }
 	$password = trim($_POST['password']);
-
-	// generate md5 hash
+	if(strlen($password) < 8){
+		$password_err = "Enter atleast 8 characters";
+		$error = true;
+	}
 	$password = md5($password);
-	// validate email
 	if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
   	$email_err = "Invalid email format";
   	$error = true;
 	}
-	// check if email already exists
+	
     $sql = "select * from users where email = '$email'";
 	$result = mysqli_query($conn,$sql);
 	if (mysqli_num_rows($result) > 0) {
@@ -27,9 +30,9 @@ if (isset($_POST['submit'])) {    // if Form is submitted
     }
 	if (!$error) {
 		
-		// write SQL statement to insert into database table
+		
 		$sql = "insert into users (email,name,password) values ('$email','$name','$password')";
-		// Execute query
+		
 		$result = mysqli_query($conn,$sql);
 		if ($result)
 			$succ_msg = "Signup Successful";
@@ -61,26 +64,22 @@ if (isset($_POST['submit'])) {    // if Form is submitted
 		<div class="text">
 			 	<!-- <label>Name</label> -->
 			 	<input type = "text" class="input" name="name" maxlength="255" value="<?php echo $name;?>" placeholder ="Enter your Name" required>
+				<div class="error"><?php if ($name_err !="") echo $name_err;?></div>
 		</div>
 		<div class="text">
 			 	<!-- <label>Password</label> -->
 			 	<input type = "password" class="input" name="password" id = "password" maxlength="20" placeholder ="Enter Password" required>
+				<div class="error"><?php if ($password_err !="") echo $password_err;?></div>
 		</div>
 		<div class="text">
 	 			<!-- <label>Confirm Password</label> -->
 	 			<input type = "password" class="input" name="conf_password" id = "conf_password" maxlength="20" value="<?php echo $conf_password;?>" placeholder ="Re Enter Password" required>
 		</div>
-		<!-- <div class="col-md-12 form-group">
-	 			<input type="checkbox" class="check" onclick="togglePwd()">Show Password
-		</div> -->
+		
 		<div class="button">
 	 			<button type="submit" class="btn" name="submit">Submit</button>
 		</div>
 	</form>
-<!-- <script>
-  $(document).ready(function() { 
-       $("#signup").addClass("active"); 
-    });
-</script> -->
+
 </body>
 </html>

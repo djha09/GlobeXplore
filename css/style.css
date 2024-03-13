@@ -122,9 +122,9 @@ html {
     margin: 0px 15px;
   }
 
-  .nav , .user:hover{
-    color: yellow;
-  }
+    /* .nav , .user:hover{
+      color: yellow;
+    } */
 
   /* .login{
     color: white;

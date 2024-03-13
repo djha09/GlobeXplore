@@ -8,7 +8,7 @@ include 'navbar.php';
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>GLOBEXPLORE</title>
     <link rel="stylesheet" href="css/style.css?v=9">
-    <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
+    <!-- <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'> -->
     <!-- favicon -->
     <link rel="icon" 
     sizes="32*32"
@@ -20,7 +20,7 @@ include 'navbar.php';
 <header>
         <!-- <div class="header-img" style="background-image: url(./img/pexels-archie-binamira-913215.jpg);"></div> -->
         <div class="header-content">
-            <h2 >Let's Travel</h2>
+            <h2 >Let's Travel The World Together</h2>
             <!-- <div class="line"></div> -->
             <!-- <h1>A WONDERFUL GIFT</h1> -->
             
@@ -41,7 +41,7 @@ include 'navbar.php';
                             Everest base camp trek is without a doubt, one of
                             the most renowned travel destinations in the world.
                         </p>
-                        <a href="#" class="bttn">All Details</a>
+                        <a href="everest.php" class="bttn">All Details</a>
                     </div>
                     <div class="card">
                         <img src="./img/card2.jpg" />
