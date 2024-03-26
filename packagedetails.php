@@ -87,10 +87,40 @@ if($query->rowCount() > 0) {
     <section id="know">
         <div class="title">
             <h1>Features</h1>
-            <p><?php echo htmlentities($result->PackageDay1);?></p>
+            <p><?php echo htmlentities($result->PackageFetures);?></p>
         </div>
         <div class="faqs"></div>
     </section>
+
+
+
+    <section id="know">
+    <div class="title">
+        <h1>Features</h1>
+    </div>
+    <div class="features">
+        <ul>
+            <?php
+            // Retrieve features from the database
+            $sql = "SELECT PackageFetures FROM packages WHERE PackageId=:pid";
+            $query = $dbh->prepare($sql);
+            $query->bindParam(':pid', $pid, PDO::PARAM_STR);
+            $query->execute();
+            $features = $query->fetchAll(PDO::FETCH_COLUMN);
+
+            // Loop through the features and display them as list items
+            foreach ($features as $feature) {
+                $sentences = explode('.', $feature);
+                foreach ($sentences as $sentence) {?>
+                <p>
+                    <?php echo "<li>" . trim($sentence) . "</li>";?>
+                </p>
+              <?php   }
+            }
+            ?>
+        </ul>
+    </div>
+</section>
 <?php 
     } // End of foreach
 } // End of if
