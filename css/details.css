@@ -73,7 +73,7 @@ html {
 /* header */
 header img{
     width: 100vw;
-    height: 100vh;
+    height: auto;
     /* background-image: url(../img/packages/cover/vietnam.jpg); */
     background-position: left;
     background-attachment: fixed;
@@ -86,10 +86,10 @@ header img{
     dis
 }
 
-  .effect{
+  /* .effect{
     background: linear-gradient(196.47deg, rgba(0, 0, 0, 0) 50.65%, #000000 99.61%);
     opacity: 0.8;
-  }
+  } */
   .header-title {
     font-family: var(--ff-lora);
     letter-spacing: 0.5rem;
@@ -118,30 +118,16 @@ header img{
   }
   .header-title p{
     margin-top: 50px;
-    /* margin-bottom: -184px; */
+    margin-bottom: 30px;
     text-align: start;
     font-size: 1.5rem;
     width: 50%;
     line-height: 27px;
     /* backdrop-filter: blur(2px); */
   }
-  .header-content{
-    font-family: var(--ff-lora);
-    /* letter-spacing: 0.5rem; */
-    color: whitesmoke;
-    text-align: center;
-    /* z-index: 1;
-    padding: 4rem; */
-    margin-bottom: 150px;
-    font-size: 1rem;
-  }
+  
 
-  .header-content p{
-    margin-top: 50px;
-    margin-bottom: 30px;
-    text-align: start;
-  }
-
+  
 
   /* events */
   section {
@@ -300,6 +286,18 @@ header img{
 .links a:hover{
   color: #fc036b;
 }
+
+.bttn {
+    font-family: var(--ff-montserrat);
+    font-size: var(--fs-links-btns);
+    font-weight: 700;
+    padding: 13px 50px;
+    background: #fc036b;
+    border-radius: 30px;
+    color: whitesmoke;
+   
+  }
+
 .best-time h1{
  padding: 20px 10px 10px 20px ;
  color: white;

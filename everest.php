@@ -9,12 +9,12 @@ include("navbar.php");
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="css/details.css?v=3">
+    <link rel="stylesheet" href="css/details.css?v=4">
 
 </head>
 <body>
 <header >
-    <img src="./img/bg.png" alt="">
+    <img src="./img/everest.jpg.jpg" alt="">
     </header>
 </div>
     <div>
@@ -24,6 +24,7 @@ include("navbar.php");
         <!-- </div> -->
         <!-- <div class="header-content"> -->
             <p>The trek to Everest Base Camp is among the most dramatic and picturesque in the Himalaya. The scenery is varied and spectacular, the lodgings and tracks are of a very high standard, and the interaction with the local Sherpa people is truly memorable.</p>
+            <a href="everest.php" class="bttn">Book Now</a>
         </div>
         </div>
 
@@ -53,6 +54,7 @@ include("navbar.php");
         <a href="#day4">Day 4</a>
         <a href="#day5">Day 5</a>
         <a href="#day6">Day 6</a>
+        
     </div>
 <!-- <h1 id="things">Things to do</h1> -->
 <!-- <h1 id="time">Best Time to visit</h1> -->

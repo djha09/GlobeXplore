@@ -39,7 +39,7 @@
                 <a href="#explore" id="three">About</a>
             </li>
             <li>
-                <a href="tours.php" id="four">Tours</a>
+                <a href="packages.php" id="four">Tours</a>
             </li>
             <!-- <li>
                 <a href="#about" id="five">About</a></li>

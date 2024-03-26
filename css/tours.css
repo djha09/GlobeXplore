@@ -171,6 +171,18 @@ html {
     /* margin-top: 86px; */
     
   }
+  .view{
+    
+      font-family: var(--ff-montserrat);
+      font-size: var(--fs-links-btns);
+      font-weight: 700;
+      padding: 13px 50px;
+      background: #fc036b;
+      border-radius: 30px;
+      color: whitesmoke;
+     margin-top: 10px;
+    
+  }
 
   /* header img{
     width: 50%;
@@ -189,7 +201,7 @@ html {
     width: 80%;
     margin: 80px auto;
     border: #fc036b;
-    bac
+    
   }
   .title {
     text-align: start;
