@@ -39,7 +39,7 @@ if($query->rowCount() > 0) {
                 <!-- <h1></h1> -->
              </div>
              <div class="details">
-                <h2>Guest:5</h2> 
+                <h2>Guest:<?php echo htmlentities($result->guest);?></h2> 
                 <h2>Date :<?php echo htmlentities($result->booking_from_date);?> to <?php echo htmlentities($result->booking_till_date);?></h2>
                 <h2>Total:&#x20B9;<?php echo htmlentities($result->PackagePrice);?></h2> 
                 

@@ -57,7 +57,7 @@ $sql = "INSERT INTO book (PackageId,firstname, middlename, lastname, gender, con
         if ($lastInsertId) {
             $msg = "Booked Successfully";
             // header('location:index.php');
-            header("Location: tickets.php?id=$lastInsertId");
+            header("Location: tc.php?bkid=$lastInsertId");
         }
          else {
             $error = "Something went wrong. Please try again";
@@ -147,7 +147,7 @@ background-color: #fc036b;
             <input type="text" class="input"  name="firstname" placeholder="Enter First Name" Required></div>
             <div class="text">
             <label> Middle name </label>
-            <input type="text" class="input"  name="middlename" placeholder="Enter Middle Name" Required></div>
+            <input type="text" class="input"  name="middlename" placeholder="Enter Middle Name" ></div>
             <div class="text">
             <label> Last name </label>
             <input type="text" class="input"  name="lastname" placeholder="Enter Last Name" Required></div>
@@ -180,12 +180,12 @@ background-color: #fc036b;
             <input type="" name="code" placeholder="Enter trip code" Required> -->
             <div class="text">
             <label> Total number of guests </label>
-            <input type="number" class="input" name="guest" placeholder="Number Of Guests" Required></div>
+            <input type="number" min="1"class="input" name="guest" placeholder="Number Of Guests (Minimum 1)" Required></div>
             <div class="text">
             <label for="date">Date From:</label>
             <input type="date" class="input" id="date" name="booking_from_date"></div>
             <div class="text">
-            <label for="date">Date From:</label>
+            <label for="date">Date Till:</label>
             <input type="date" class="input" id="date" name="booking_till_date"></div>
             </div>
             </div>
