@@ -75,13 +75,13 @@ html {
 
 /* footer */
 body{
-    background-color: #161616;
+    /* background-color: #161616; */
 }
 
 .box1{
     width: 100vw;
     /* height: 50vh; */
-   background-color: #484646;
+   background-color: black;
     margin-top: 10px;
     
     /* margin: 130px auto; */

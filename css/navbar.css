@@ -89,7 +89,7 @@ html {
   .nav-links {
     display: flex;
     align-items: center;
-    word-spacing: 55px;
+    word-spacing: 0px;
   }
   
  
@@ -176,6 +176,11 @@ html {
     margin-top: 20px;
     
     
+  }
+  .logo:hover{
+    /* color: #484646; */
+    transform: scale(1.1);
+    transition: ease-in-out;
   }
   .menu-btn {
     position: absolute;

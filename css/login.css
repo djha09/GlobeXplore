@@ -1,12 +1,12 @@
 * {box-sizing: border-box;
 }
 body {
-    /* background-image: url(../img/david-marcu-78A265wPiO4-unsplash.jpg); */
+    background-image: url(../img/david-marcu-78A265wPiO4-unsplash.jpg);
 
     background-size: cover;
-    width: 100vw;
-    height: 100vh;
-    background-image: url(../img/david-marcu-78A265wPiO4-unsplash.jpg);
+    /* width: 100vw;
+    height: 100vh; */
+    /* background-image: url(../img/david-marcu-78A265wPiO4-unsplash.jpg); */
     background-position: center;
     background-attachment: fixed;
     /* display: flex; */
@@ -21,7 +21,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 130px;
+    /* margin-top: 130px; */
     /* background-color: #4070f4; */
     column-gap: 30px;
     /* background-color: #0171d3; */
@@ -43,15 +43,15 @@ h1{
     font-weight: 600;
     color: #fc036b;
     text-align: center;
-    padding-bottom: 20px;
+    margin-top: 100px;
+    margin-bottom: -51px;
 }
-
-.text
 .text,label{
     padding-bottom: 15px;
     font-size: 25px;
 
 }
+
 .input {
     padding-left: 15px;
     height: 5vh;
@@ -60,6 +60,7 @@ h1{
     font-size: 16px;
     font-weight: 400;
     border-radius: 5px 
+    
 
     
     

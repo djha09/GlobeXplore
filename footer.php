@@ -10,9 +10,7 @@
     
 
 <div class="footer" id="footer">
-<!-- <div class ="title">
-    <h1>GlobExplore</h1>
-    </div> -->
+
     <div class="box1">
     <h1>GLOBEXPLORE</h1>
     <h4>Discover amazing journeys with us. We specialize in crafting unique travel experiences. Explore our handpicked destinations and start creating unforgettable memories. Your adventure begins here!.</h4>
@@ -30,10 +28,10 @@
 
         </a>
         </div>
-        <!-- <h1>Social</h1> -->
+        
         <div class="social">
         <a href="">
-            <!-- <p>Our Instagram</p> -->
+          
             
             <img src="./img/i1.png" alt=""></a>
             <a href="">

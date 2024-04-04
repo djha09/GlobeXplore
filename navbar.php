@@ -18,7 +18,7 @@
 <!-- navbar -->
 
     <nav class="navbar" >
-        <span><a >
+        <span><a href="index.php">
             <img
                     class="logo1"
                     src="./img/logo (2).png"/> 
@@ -36,7 +36,7 @@
                 <a href="#events" id="two" >Events</a>
             </li>
             <li>
-                <a href="#explore" id="three">About</a>
+                <a href="#explore" id="three">About us</a>
             </li>
             <li>
                 <a href="packages.php" id="four">Tours</a>

@@ -2,6 +2,7 @@
 error_reporting(0);
 include 'adminconfig.php';
 include 'dbconnect.php';
+include 'sidebarmenu.php';	
 // include 'adminnavbasr.php';
 if(strlen($_SESSION['alogin'])==0){	
 header('location:adminclick.php');
@@ -31,7 +32,7 @@ header('location:adminclick.php');
 <!-- Bootstrap Core CSS -->
 <link href="css/bootstrap.min.css" rel='stylesheet' type='text/css' />
 <!-- Custom CSS -->
-<link href="css/style.css" rel='stylesheet' type='text/css' />
+<link href="css/style1.css" rel='stylesheet' type='text/css' />
 <link rel="stylesheet" href="css/morris.css" type="text/css"/>
 <!-- Graph CSS -->
 <link href="css/font-awesome.css" rel="stylesheet"> 
@@ -54,6 +55,11 @@ header('location:adminclick.php');
 <!-- lined-icons -->
 <link rel="stylesheet" href="css/icon-font.min.css" type='text/css' />
 <!-- //lined-icons -->
+<style>
+	body{
+		background-color: black;
+	}
+</style>
 </head> 
 <body>
    <div class="page-container">

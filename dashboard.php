@@ -91,7 +91,7 @@ while ($row = mysqli_fetch_array($result)) {
 				</a>
 
 
-<a href="trendingpackages.php" target="_blank">
+<a href="trendingpackages.php" >
 						<div class="col-md-4 four-grid">
 						<div class="four-w3ls">
 							

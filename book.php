@@ -40,7 +40,7 @@ $sql = "INSERT INTO book (PackageId,firstname, middlename, lastname, gender, con
 
 
     $query = $dbh->prepare($sql);
-    $query->bindParam(':pid', $pid, PDO::PARAM_INT); // Assuming PackageId is an integer
+    $query->bindParam(':pid', $pid, PDO::PARAM_INT); 
     $query->bindParam(':firstname', $firstname, PDO::PARAM_STR);
     $query->bindParam(':middlename', $middlename, PDO::PARAM_STR);
     $query->bindParam(':lastname', $lastname, PDO::PARAM_STR);
@@ -56,7 +56,8 @@ $sql = "INSERT INTO book (PackageId,firstname, middlename, lastname, gender, con
         $lastInsertId = $dbh->lastInsertId();
         if ($lastInsertId) {
             $msg = "Booked Successfully";
-            header('location:index.php');
+            // header('location:index.php');
+            header("Location: tickets.php?id=$lastInsertId");
         }
          else {
             $error = "Something went wrong. Please try again";
@@ -77,24 +78,83 @@ else{
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Book Now !</title>
-    <link rel="stylesheet" href="login.css">
+    <link rel="stylesheet" href="css/login.css?v=2">
     <!-- favicon -->
 <link rel="icon" 
     sizes="32*32"
     href="./img/Screenshot_2024-03-01_221406-removebg-preview.png">
+    <style>
+* {
+  box-sizing: border-box;
+}
+
+.row {
+    display: flex;
+    width: 80%;
+    margin:  auto;
+    /* background-color: white; */
+    padding: 45px 40px 15px 40px;
+}
+.space{
+    /* background-color: #fff; */
+    /* display: contents; */
+    width: 65vw;
+    height: auto;
+    margin: auto;
+}
+.space.button{
+    margin: auto;
+}
+.button{
+    display: flex;
+    padding: 0px 10px 32px 10px;
+}
+.btn{
+background-color: #fc036b;
+    height: 5vh;
+    width: 20vw;
+    border: none;
+    font-size: 16px;
+    font-weight: 400;
+    border-radius: 1px;
+    position: relative;
+    margin: auto;
+}
+/* Create two equal columns that sits next to each other */
+.column {
+  flex: 50%;
+  padding: 10px;
+  /* height: 300px;  */
+  border-bottom: black dashed 2px;
+
+}
+</style>
 </head>
 <body>
     <body>
     
-        <h1>Booking </h1>
+        <!-- <h1>Booking </h1> -->
         <!-- <h2> And Get Extra Bonus </h2>  -->
         <form method="POST">
+            <div class="space">
+                <h1>BOOKINGS</h1>
+            <div class="row">
+            <div class="column1">
+                <img src="/img/Australia.jpg" alt=""></div>
+            <div class="column">
+            <div class="text">
             <label> First name </label>
-            <input type="text" name="firstname" placeholder="Enter First Name" Required>
+            <input type="text" class="input"  name="firstname" placeholder="Enter First Name" Required></div>
+            <div class="text">
             <label> Middle name </label>
-            <input type="text" name="middlename" placeholder="Enter Middle Name" Required>
+            <input type="text" class="input"  name="middlename" placeholder="Enter Middle Name" Required></div>
+            <div class="text">
             <label> Last name </label>
-            <input type="text" name="lastname" placeholder="Enter Last Name" Required>
+            <input type="text" class="input"  name="lastname" placeholder="Enter Last Name" Required></div>
+            <div class="text">
+                <label >Gender</label>
+            </div>
+            <div class="text">
             <span>
             <label>
             <input type="radio" name="gender" value="male">Male</label>
@@ -102,28 +162,44 @@ else{
             <input type="radio" name="gender" value="female">Female</label>
             <label>
             <input type="radio" name="gender" value="other">Other</label>
-            </span>
+            </span></div>
+           
+            <div class="text">
             <label> Contact </label>
-            <input type="tel" pattern="[0-9]{10}" maxlength="10" name="contact" Required>
+            <input type="tel" class="input" pattern="[0-9]{10}" maxlength="10" name="contact" Required></div>
+            </div>
+            <div class="column">
+            
+            <div class="text">
             <label> Address </label>
-            <input type="text" name="address" placeholder="Address" Required>
+            <input type="text" class="input" name="address" placeholder="Address" Required></div>
+            <div class="text">
             <label> Email </label>
-            <input type="email" name="email" placeholder="Email" Required>
+            <input type="email" class="input" name="email" placeholder="Email" Required></div>
             <!-- <label> Enter trip code </label>
             <input type="" name="code" placeholder="Enter trip code" Required> -->
+            <div class="text">
             <label> Total number of guests </label>
-            <input type="number" name="guest" placeholder="Number Of Guests" Required>
+            <input type="number" class="input" name="guest" placeholder="Number Of Guests" Required></div>
+            <div class="text">
             <label for="date">Date From:</label>
-            <input type="date" id="date" name="booking_from_date">
+            <input type="date" class="input" id="date" name="booking_from_date"></div>
+            <div class="text">
             <label for="date">Date From:</label>
-            <input type="date" id="date" name="booking_till_date">
-
-            <div class="button">
-                <button type="submit" class="btn" name="submit">Submit</button>
+            <input type="date" class="input" id="date" name="booking_till_date"></div>
             </div>
+            </div>
+            <div class="button">
+             
+             
+            
+                <button type="submit" class="btn" name="submit">Submit</button>
+                
+            </div>
+            </div>
+            
         </form>
-        
-
+       
 </body>
 </body>
 </html>

@@ -2,7 +2,9 @@
 					<header class="logo1">
 						
 					</header>
-						<div style="border-top:1px ridge rgba(255, 255, 255, 0.15)"><li><a href="logout.php"><i class="fa fa-tachometer"></i> <span>Logout</span><div class="clearfix"></div></a></li></div>
+						<div style="border-top:1px ridge rgba(255, 255, 255, 0.15)"><li><a href="logout.php"><i class="fa fa-tachometer"></i> <span>Logout</span><div class="clearfix"></div></a></li>
+						<li><a href="index.php"><i class="fa fa-tachometer"></i> <span>Go To Website</span><div class="clearfix"></div></a></li></div>
+						
                            <div class="menu">
 									<ul id="menu" >
 									

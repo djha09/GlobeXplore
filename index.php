@@ -30,30 +30,80 @@ include 'navbar.php';
          <section class="events" id="events">
             <div class="container">
                 <div class="title">
-                    <h1>Upcoming Events</h1>
+                    <h1>Popular Destinations</h1>
                     <!-- <div class="line"></div> -->
                 </div>
                 <div class="box">
-                    <div class="card">
-                        <img class="card-img" src="./img/card1.jfif" />
+                    <!-- <div class="card">
+                        <img class="card-img" src="./img/popular-1.jpg" />
                         <h4>Everest camp trek</h4>
                         <p class="font-color">
                             Everest base camp trek is without a doubt, one of
                             the most renowned travel destinations in the world.
                         </p>
                         <a href="everest.php" class="bttn">All Details</a>
-                    </div>
-                    <div class="card">
-                        <img src="./img/card2.jpg" />
+                    </div> -->
+                    <div class="popular-card">
+                    <figure class="card-img">
+                  <img src="./img/popular-1.jpg" alt="San miguel, italy" loading="lazy">
+                </figure>
+                    <div class="card-content">
+
+                 
+
+                  <p class="card-subtitle">
+                    <a href="#">Italy</a>
+                  </p>
+
+                  <h3 class="h3 card-title">
+                    <a href="#">San miguel</a>
+                  </h3>
+
+                  <p class="card-text">
+                    Fusce hic augue velit wisi ips quibusdam pariatur, iusto.
+                  </p>
+
+                </div>
+
+              </div>
+
+                    <!-- <div class="card">
+                        <img src="./img/popular-2.jpg" />
                     <h4>Lakshadweep</h4>
                     <p class="font-color">
                         Settled off the Kerala coast on Laccadive sea, Lakshadweep . 
                         A club of 36 islands, a nature tourism destination.
                     </p>
                     <a href="#" class="bttn">All Details</a>
+                </div> -->
+
+
+                <div class="popular-card">
+                    <figure class="card-img">
+                  <img src="./img/popular-2.jpg" alt="San miguel, italy" loading="lazy">
+                </figure>
+                    <div class="card-content">
+
+                 
+
+                  <p class="card-subtitle">
+                    <a href="#">Italy</a>
+                  </p>
+
+                  <h3 class="h3 card-title">
+                    <a href="#">San miguel</a>
+                  </h3>
+
+                  <p class="card-text">
+                    Fusce hic augue velit wisi ips quibusdam pariatur, iusto.
+                  </p>
+
                 </div>
-                <div class="card">
-                    <img src="./img/card3.jpg" />
+
+              </div>
+
+                <!-- <div class="card">
+                    <img src="./img/popular-3.jpg" />
                     <h4>Desert Safari</h4>
                     <p class="font-color">
                         Embark on the best desert safari in Dubai and try thrilling activities,
@@ -62,7 +112,32 @@ include 'navbar.php';
                     <a href="#" class="bttn">All Details</a>
                 </div>
             </div>
-        </div>
+        </div> -->
+
+        <div class="popular-card">
+                    <figure class="card-img">
+                  <img src="./img/popular-3.jpg" alt="San miguel, italy" loading="lazy">
+                </figure>
+                    <div class="card-content">
+
+                 
+
+                  <p class="card-subtitle">
+                    <a href="#">Italy</a>
+                  </p>
+
+                  <h3 class="h3 card-title">
+                    <a href="#">San miguel</a>
+                  </h3>
+
+                  <p class="card-text">
+                    Fusce hic augue velit wisi ips quibusdam pariatur, iusto.
+                  </p>
+
+                </div>
+
+              </div>
+
     </section>
     <!--Events-->
 <!-- <div class="background-image" style="background-image: url(./img/pexels-archie-binamira-913215.jpg);"></div> -->
@@ -128,8 +203,8 @@ Welcome to GlobExplore your gateway to unforgettable adventures! We specialize i
 
 <!-- contact us -->
 
-<div id="footer"></div>
-<!-- <?php include("footer.php");?>	 -->
+
+ <?php include("footer.php");?>	 
 </body>
 
 </html>

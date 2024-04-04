@@ -1,41 +1,20 @@
-<?php
-session_start();
-error_reporting(0);
-include 'adminconfig.php';
-include 'dbconnect.php';
-include 'navbar.php';
-if(isset($_POST['submit2']))
-{
-$pid=intval($_GET['pkgid']);
-$useremail=$_SESSION['login'];
-$query->bindParam(':pid',$pid,PDO::PARAM_STR);
-$query->bindParam(':useremail',$useremail,PDO::PARAM_STR);
-$query->execute();
-$lastInsertId = $dbh->lastInsertId();
-if($lastInsertId)
-{
-$msg="Booked Successfully";
-}
-else 
-{
-$error="Something went wrong. Please try again";
-}
-
-}
-?>
-
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Itenary</title>
+    <title>GLOBEXPLORE</title>
     <link rel="stylesheet" href="css/details.css?v=4">
-
+    <link rel="icon" sizes="32*32" href="./img/Screenshot_2024-03-01_221406-removebg-preview.png">				
 </head>
 <body>
+
 <?php 
+session_start();
+error_reporting(0);
+include 'adminconfig.php';
+include 'navbar.php';
+
 $pid=intval($_GET['pkgid']);
 $sql = "SELECT * from packages where PackageId=:pid";
 $query = $dbh->prepare($sql);

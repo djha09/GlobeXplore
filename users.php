@@ -3,6 +3,7 @@ session_start();
 error_reporting(0);
 include 'adminconfig.php';
 include 'dbconnect.php';
+include 'sidebarmenu.php';
 // include 'adminnavbar.php';
 if(strlen($_SESSION['alogin'])==0)
 	{	
@@ -20,7 +21,7 @@ else{
 <!-- Bootstrap Core CSS -->
 <link href="css/bootstrap.min.css" rel='stylesheet' type='text/css' />
 <!-- Custom CSS -->
-<link href="css/style.css" rel='stylesheet' type='text/css' />
+<link href="css/style1.css" rel='stylesheet' type='text/css' />
 <link rel="stylesheet" href="css/morris.css" type="text/css"/>
 <!-- Graph CSS -->
 <link href="css/font-awesome.css" rel="stylesheet"> 
@@ -43,6 +44,11 @@ else{
 <!-- lined-icons -->
 <link rel="stylesheet" href="css/icon-font.min.css" type='text/css' />
 <!-- //lined-icons -->
+<style>
+	body{
+		background-color: black;
+	}
+</style>
 </head> 
 <body>
    <div class="page-container">
